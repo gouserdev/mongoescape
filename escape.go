@@ -32,7 +32,7 @@ func Escape(key string) string {
 	re = regexp.MustCompile(`\{`)
 	key = re.ReplaceAllString(key, "\uFF0F")
 	re = regexp.MustCompile(`\}`)
-	key = re.ReplaceAllString(key, "\uFF0G")
+	key = re.ReplaceAllString(key, "\uFF11")
 	return key
 }
 
@@ -65,7 +65,7 @@ func Unescape(key string) string {
 	key = re.ReplaceAllString(key, `.`)
 	re = regexp.MustCompile("\uFF0F")
 	key = re.ReplaceAllString(key, `{`)
-	re = regexp.MustCompile("\uFF0G")
+	re = regexp.MustCompile("\uFF11")
 	key = re.ReplaceAllString(key, `}`)
 	return key
 }
