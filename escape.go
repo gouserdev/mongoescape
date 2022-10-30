@@ -1,4 +1,4 @@
-package mongo_escape
+package mongoescape
 
 import "regexp"
 
